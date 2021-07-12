@@ -4,18 +4,11 @@
   "description": "Prueba Práctica Tuten - Problema 2",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anhurtado/utc-time.git"
   },
   "author": "Anthony Hurtado",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/anhurtado/utc-time/issues"
-  },
-  "homepage": "https://github.com/anhurtado/utc-time#readme",
   "dependencies": {
     "express": "^4.17.1"
   }

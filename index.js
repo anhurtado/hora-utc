@@ -15,7 +15,7 @@ app.post('/', function (req, res) {
   res.status(200).json({
     response: {
       time: timeConvert,
-      timezone: timezone
+      timezone: `utc${ timezone }`
     }
   });
 });
@@ -28,10 +28,11 @@ function convertTime(time, timezone) {
 
   // Operación
   if (operator === '+') {
-    hour = timeSplit[0] + tz;
+    hour = Number.parseInt(timeSplit[0], 10) - tz;
   } else {
-    hour = timeSplit[0] - tz;
+    hour = Number.parseInt(timeSplit[0], 10) + tz;
   }
+  hour = Math.abs(hour);
 
   // Obtener la fecha UTC
   return `${ hour }:${ timeSplit[1] }:${ timeSplit[2] }`;
