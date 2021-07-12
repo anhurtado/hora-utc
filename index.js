@@ -1,8 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 
 // Configuración
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // Ruta UTC
 app.post('/', function (req, res) {
